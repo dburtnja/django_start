@@ -74,20 +74,33 @@ WSGI_APPLICATION = 'elcom.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'elcom_db',
-        'USER': 'django_auto',
-        'PASSWORD': '159687',
-        'HOST': 'localhost',
-        "PORT": '3308'
+if os.environ.get("ENV") == "PRODUCTION":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'HZLyoFT5Hx',
+            'USER': 'HZLyoFT5Hx',
+            'PASSWORD': 'DgLZDh6I3P',
+            'HOST': 'remotemysql.com',
+            "PORT": '3306'
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'elcom_db',
+            'USER': 'django_auto',
+            'PASSWORD': '159687',
+            'HOST': 'localhost',
+            "PORT": '3308'
+        }
     }
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
-}
+
 
 
 # Password validation
