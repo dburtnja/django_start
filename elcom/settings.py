@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # "market",
+    # 'channels'
 ]
 
 MIDDLEWARE = [
@@ -71,8 +73,10 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'elcom.wsgi.application'
+# WSGI_APPLICATION = 'elcom.wsgi.application'
+ASGI_APPLICATION = 'elcom.routing.application'
 
+# CHANNEL_LAYERS = {}
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
