@@ -5,5 +5,5 @@ import requests
 
 
 def market(request):
-    result = requests.get("https://booking.uz.gov.ua/")
+    result = requests.get("https://www.eps.org.ua/ternopil/account/view/Ib5pfc9lw4mLbkI3cqKfrg")
     return HttpResponse(result.content)
